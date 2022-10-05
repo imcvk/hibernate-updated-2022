@@ -100,7 +100,6 @@ public class DBUtil {
 	}
 
 	public void multiSelectOperation() {
-
 		CriteriaBuilder cb = session.getCriteriaBuilder();
 		CriteriaQuery<List> cq = cb.createQuery(List.class);
 		Root<Employee> root = cq.from(Employee.class);
@@ -118,7 +117,18 @@ public class DBUtil {
 		});
 
 	}
-
+	/**
+	 * Fetch records based on given position
+	 * */
+	public void printUsersBasedOnPosition(String position) {
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<Employee> criteriaQuery = builder.createQuery(Employee.class);
+		Root<Employee> root = criteriaQuery.from(Employee.class);
+		criteriaQuery.select(root).where(builder.equal(root.get("position"), position));
+		Query query = session.createQuery(criteriaQuery);
+		List list = query.getResultList();
+		list.forEach(System.out::println);
+	}
 	/**
 	 * select a single column where name starts with s
 	 */
@@ -188,13 +198,4 @@ public class DBUtil {
 		return this;
 	}
 
-	public void printUsersBasedOnPosition(String position) {
-		CriteriaBuilder builder = session.getCriteriaBuilder();
-		CriteriaQuery<Employee> criteriaQuery = builder.createQuery(Employee.class);
-		Root<Employee> root = criteriaQuery.from(Employee.class);
-		criteriaQuery.select(root).where(builder.equal(root.get("position"), position));
-		Query query = session.createQuery(criteriaQuery);
-		List list = query.getResultList();
-		list.forEach(System.out::println);
-	}
 }
