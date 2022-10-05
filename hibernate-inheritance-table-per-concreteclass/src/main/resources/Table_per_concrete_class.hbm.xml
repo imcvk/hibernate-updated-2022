@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="xml_based.models.payment.PaymentXMLBased">
+        <id name="paymentId">
+            <generator class="assigned"/>
+        </id>
+        <property name="amount"/>
+        <property name="dateTime"/>
+        <union-subclass name="xml_based.models.payment.ChequePaymentXMLBased">
+            <property name="chequeType"/>
+        </union-subclass>
+        <union-subclass name="xml_based.models.payment.CreditCardPaymentXMLBased">
+            <property name="cardType"/>
+        </union-subclass>
+    </class>
+    <class name="xml_based.models.employee.EmployeeXMLBased">
+        <id name="empId">
+            <generator class="assigned"/>
+        </id>
+        <property name="empDesignation"/>
+        <property name="empName"/>
+        <union-subclass name="xml_based.models.employee.ContractEmployeeXMLBased">
+            <property name="contractPeriod"/>
+            <property name="payPerHr"/>
+        </union-subclass>
+        <union-subclass name="xml_based.models.employee.RegularEmployeeXMLBased">
+            <property name="salary"/>
+            <property name="bonus"/>
+        </union-subclass>
+    </class>
+</hibernate-mapping>

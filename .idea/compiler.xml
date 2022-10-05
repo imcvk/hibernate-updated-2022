@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hibernate-versioning-timestampdemo" />
+        <module name="hibernate-inheritance-table-per-class" />
+        <module name="hiberante-criteria" />
+        <module name="hibernate-mapping-xml" />
+        <module name="hibernate-connection-pooling" />
+        <module name="hibernate-multi-row-operations" />
+        <module name="hibernate-inheritance-table-per-conreteclass" />
+        <module name="hibernate-composite-key" />
+        <module name="hibernate-mapping-xml-crud" />
+        <module name="hibernate-inheritance-table-per-sub-class" />
+        <module name="hibernate-generators" />
+        <module name="hibernate-object-states" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hibernate-connection-pooling-third-party" target="18" />
+      <module name="hibernate-inheritance-table-per-concreteclass" target="18" />
+      <module name="hibernate-mapping-annotation-crud" target="18" />
+      <module name="hibernate-mapping-xml-crud" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
