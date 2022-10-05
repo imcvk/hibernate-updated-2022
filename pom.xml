@@ -18,8 +18,8 @@
         <module>hibernate-inheritance-table-per-sub-class</module>
         <module>hibernate-connection-pooling</module>
         <module>hibernate-connection-pooling-third-party</module>
-        <module>hibernate-multi-row-operations</module>
-        <module>hiberante-criteria</module>
+        <module>hibernate-hql</module>
+        <module>hibernate-criteria</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

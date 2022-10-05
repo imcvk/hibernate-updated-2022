@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/hibernate-inheritance-table-per-concreteclass/pom.xml" />
+        <option value="$PROJECT_DIR$/hibernate-hql/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

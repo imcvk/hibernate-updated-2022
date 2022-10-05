@@ -9,16 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-versioning-timestampdemo" />
         <module name="hibernate-inheritance-table-per-class" />
-        <module name="hiberante-criteria" />
+        <module name="hibernate-hql" />
         <module name="hibernate-mapping-xml" />
         <module name="hibernate-connection-pooling" />
-        <module name="hibernate-multi-row-operations" />
         <module name="hibernate-inheritance-table-per-conreteclass" />
         <module name="hibernate-composite-key" />
         <module name="hibernate-mapping-xml-crud" />
         <module name="hibernate-inheritance-table-per-sub-class" />
         <module name="hibernate-generators" />
         <module name="hibernate-object-states" />
+        <module name="hibernate-criteria" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
