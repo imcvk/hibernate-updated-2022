@@ -3,7 +3,10 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="hibernate-connection-pooling-third-party:src:main:resources:hibernate.cfg.xml" value="d5877b0a-6964-42e9-9284-93c44022db4a" />
+          <unit-entry name="hibernate-connection-pooling-third-party:target:classes:hibernate.cfg.xml" value="f7d21a74-56fa-4304-9551-341771041923" />
+        </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/hibernate-connection-pooling-third-party/src/main/resources/hibernate.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/hibernate-connection-pooling-third-party/target/classes/hibernate.cfg.xml" />

@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--        connection properties-->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/hibernateyt</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Cs@2302$</property>
+        <!--        hibernate properties-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <!--        mapping properties-->
+        <mapping class="entities.xml.Product_Using_Increment_Generator_XML"/>
+        <mapping class="entities.xml.Product_Using_Sequence_Generator_XML"/>
+        <mapping class="entities.xml.Product_Using_Native_Generator_XML"/>
+        <mapping class="entities.xml.Product_Using_Identity_Generator_XML"/>
+        <mapping class="entities.xml.Product_Using_UUID_Generator_XML"/>
+        <mapping class="entities.xml.Product_Using_Foreign_Generator_XML"/>
+        <mapping class="entities.annotation.Product_Using_AUTO_Generator_Annotations"/>
+        <mapping class="entities.annotation.Product_Using_Sequence_Generator_Annotations"/>
+        <mapping class="entities.annotation.Product_Using_Table_Generator_Annotations"/>
+        <mapping class="entities.annotation.Product_Using_Identity_Generator_Annotations"/>
+        <mapping class="entities.xml.Lab"/>
+        <mapping class="entities.usingcustomgenerator.Product_Using_Custom_Generator"/>
+        <mapping resource="hibernate-mapping.xml"/>
+    </session-factory>
+</hibernate-configuration>

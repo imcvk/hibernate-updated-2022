@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hibernate-versioning-timestampdemo" />
         <module name="hibernate-inheritance-table-per-class" />
+        <module name="hibernate-collection-mapping" />
         <module name="hibernate-hql" />
         <module name="hibernate-mapping-xml" />
         <module name="hibernate-connection-pooling" />
+        <module name="hibernate-native-sql-queries" />
+        <module name="hibernate-inheritance-table-per-sub-class" />
+        <module name="hibernate-object-states" />
+        <module name="hibernate-criteria" />
+        <module name="hibernate-versioning-timestampdemo" />
         <module name="hibernate-inheritance-table-per-conreteclass" />
         <module name="hibernate-composite-key" />
         <module name="hibernate-mapping-xml-crud" />
-        <module name="hibernate-inheritance-table-per-sub-class" />
         <module name="hibernate-generators" />
-        <module name="hibernate-object-states" />
-        <module name="hibernate-criteria" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

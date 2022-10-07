@@ -20,6 +20,8 @@
         <module>hibernate-connection-pooling-third-party</module>
         <module>hibernate-hql</module>
         <module>hibernate-criteria</module>
+        <module>hibernate-collection-mapping</module>
+        <module>hibernate-native-sql-queries</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

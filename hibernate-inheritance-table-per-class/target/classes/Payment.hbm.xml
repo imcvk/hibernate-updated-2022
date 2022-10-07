@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="using_xml_configuration.entities.Payment" table="PAYMENT">
+    <id name="payment_id" type="int">
+        <column name="PAYMENTID" length="8"/>
+        <generator class="assigned" />
+    </id>
+    <discriminator column="payment_mode" length="10" type="java.lang.String" />
+    <property name="amount" type="double">
+        <column name="AMOUNT" length="10"/>
+    </property>
+    <property name="payment_date" type="java.util.Date">
+        <column name="PAYMENTDATE" length="33"/>
+    </property>
+
+    <subclass name="using_xml_configuration.entities.CreditCard" discriminator-value="card">
+        <property name="cc_type" column="CCTYPE" length="8"/>
+    </subclass>
+    <subclass name="using_xml_configuration.entities.Cheque" discriminator-value="cheque">
+        <property name="cheque_type" column="CHTYPE" length="8"/>
+    </subclass>
+    </class>
+</hibernate-mapping>
