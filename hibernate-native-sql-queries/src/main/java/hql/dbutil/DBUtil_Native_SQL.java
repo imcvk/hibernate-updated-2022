@@ -73,4 +73,33 @@ public class DBUtil_Native_SQL {
 		List<Object> list = query.getResultList();
 		list.forEach(System.out::println);
 	}
+
+	/*
+	Update using native sql
+	*/
+	public void updateUsingNativeSQL() {
+		String updateQuery = "update Employee e set e.salary=e.salary+100000 where e.position=?";
+		NativeQuery query = session.createNativeQuery(updateQuery);
+		query.setParameter(1, "Developer");
+		query.executeUpdate();
+		transaction.commit();
+	}
+
+	/*
+	 * Insert using native sql
+	 * */
+	public void insertUsingSQL(Employee employee) {
+		String insert_query = "insert into Employee(address, email, fName, lName, position, salary) values(?,?,?,?,?,?)";
+		NativeQuery query = session.createNativeQuery(insert_query,Employee.class);
+		query.setParameter(1, employee.getAddress());
+		query.setParameter(2, employee.getEmail());
+		query.setParameter(3, employee.getFName());
+		query.setParameter(4, employee.getLName());
+		query.setParameter(5, employee.getPosition());
+		query.setParameter(6, employee.getSalary());
+
+		int i = query.executeUpdate();
+		System.out.println(i);
+		transaction.commit();
+	}
 }

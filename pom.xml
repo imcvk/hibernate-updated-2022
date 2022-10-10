@@ -22,6 +22,7 @@
         <module>hibernate-criteria</module>
         <module>hibernate-collection-mapping</module>
         <module>hibernate-native-sql-queries</module>
+        <module>hibernate-named-query</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.query.NativeQuery;
 
 import java.util.List;
 import java.util.Map;
@@ -43,4 +44,5 @@ public class Student {
 			System.out.print(project + ",");
 		}
 	}
+
 }

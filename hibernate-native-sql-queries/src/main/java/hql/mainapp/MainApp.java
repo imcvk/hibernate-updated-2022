@@ -10,11 +10,13 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		DBUtil_Native_SQL dbUtil_native_sql = new DBUtil_Native_SQL();
-		//insertBulk(dbUtil_native_sql);
-		//dbUtil_native_sql.simple_select_native_sql1();
-		//dbUtil_native_sql.simple_select_native_sql2();
-		//dbUtil_native_sql.select_conditional();
-		dbUtil_native_sql.select_conditional1();
+//		insertBulk(dbUtil_native_sql);
+//		dbUtil_native_sql.simple_select_native_sql1();
+//		dbUtil_native_sql.simple_select_native_sql2();
+//		dbUtil_native_sql.select_conditional();
+//		dbUtil_native_sql.select_conditional1();
+//		dbUtil_native_sql.updateUsingNativeSQL();
+		dbUtil_native_sql.insertUsingSQL(bootstrapEmployeeObject());
 	}
 
 	public static Employee bootstrapEmployeeObject() {

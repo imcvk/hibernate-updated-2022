@@ -21,6 +21,7 @@
         <module name="hibernate-composite-key" />
         <module name="hibernate-mapping-xml-crud" />
         <module name="hibernate-generators" />
+        <module name="hibernate-named-query" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
