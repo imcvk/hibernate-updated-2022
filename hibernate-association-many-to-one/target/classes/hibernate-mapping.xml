@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="xml.entities.Vendor">
+        <id name="vendorId">
+            <generator class="increment"/>
+        </id>
+        <property name="vendorName"/>
+
+    </class>
+    <class name="xml.entities.Customer">
+        <id name="customerId">
+            <generator class="increment"/>
+        </id>
+        <property name="customerName"/>
+        <property name="customerAddress"/>
+        <many-to-one name="vendor" class="xml.entities.Vendor" cascade="all"/>
+    </class>
+</hibernate-mapping>

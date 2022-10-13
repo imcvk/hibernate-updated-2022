@@ -1,0 +1,24 @@
+package xml.util.dbutil;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import xml.util.hibernateutil.HibernateUtil;
+
+public class DBUtils {
+	public static SessionFactory sessionFactory = null;
+	public static Session session = null;
+	public static Transaction transaction = null;
+
+	public DBUtils() {
+		sessionFactory = HibernateUtil.getSessionFactory();
+		session = sessionFactory.openSession();
+		transaction = session.getTransaction();
+	}
+
+	public void create(Object o) {
+		transaction.begin();
+		session.persist(o);
+		transaction.commit();
+	}
+}
