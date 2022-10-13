@@ -1,6 +1,0 @@
-entities/Book.class
-util/DB_Operations.class
-util/HibernateUtil.class
-mainclient/MainApp.class
-entities/NovelComposite.class
-entities/Novel.class

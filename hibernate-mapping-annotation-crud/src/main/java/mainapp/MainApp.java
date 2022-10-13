@@ -16,8 +16,8 @@ public class MainApp {
 		Employee e = new Employee();
 		e.setId(id);
 		e.setName("Suresh");
-		MainApp mainApp = new MainApp();
-		mainApp.update2(new Employee(4028,"testName"));
+		//annotations.mainapp.MainApp mainApp = new annotations.mainapp.MainApp();
+		//mainApp.update2(new Employee(4028,"testName"));
 		//insert
 //		mainApp.create(e);
 //		mainApp.read(e);

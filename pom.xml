@@ -23,6 +23,9 @@
         <module>hibernate-collection-mapping</module>
         <module>hibernate-native-sql-queries</module>
         <module>hibernate-named-query</module>
+        <module>hibernate-procedure-functions-call</module>
+        <module>hibernate-associations-one-to-many</module>
+        <module>hibernate-association-one-to-many-bag</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

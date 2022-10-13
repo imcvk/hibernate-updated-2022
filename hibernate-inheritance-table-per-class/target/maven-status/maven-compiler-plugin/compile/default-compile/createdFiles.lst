@@ -1,9 +1,0 @@
-using_xml_configuration/entities/Cheque.class
-using_annotation/entities/Cheque.class
-using_xml_configuration/mainapp/MainApp.class
-using_annotation/mainapp/MainApp.class
-common/util/HibernateUtil.class
-using_xml_configuration/entities/CreditCard.class
-using_annotation/entities/Payment.class
-using_xml_configuration/entities/Payment.class
-using_annotation/entities/CreditCard.class

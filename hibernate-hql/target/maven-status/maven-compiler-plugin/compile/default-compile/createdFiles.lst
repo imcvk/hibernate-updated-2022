@@ -1,6 +1,0 @@
-hql/entities/TestEmployee.class
-hql/entities/Employee.class
-util/HibernateUtil.class
-util/DataFaker.class
-hql/dbutil/HQL_Operations.class
-hql/mainapp/MainApp.class
