@@ -1,0 +1,7 @@
+util/dbutil/DataFaker.class
+usingxml/mainapp/MainApp.class
+usingxml/entities/License.class
+util/hibernateutil/HibernateUtil_Annotations.class
+usingxml/entities/User.class
+util/hibernateutil/HibernateUtil_Xml.class
+util/dbutil/DBUtils.class

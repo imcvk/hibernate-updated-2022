@@ -2,24 +2,24 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="xml.entities.set.Vendor">
+    <class name="usingxml.entities.set.Vendor">
         <id name="vendorId" column="VENDORID">
             <generator class="increment"/>
         </id>
         <property name="vendorName"/>
         <set name="customers" cascade="all" lazy="true">
             <key column="VENDORID"></key>
-            <one-to-many class="xml.entities.set.Customer"/>
+            <one-to-many class="usingxml.entities.set.Customer"/>
         </set>
     </class>
-    <class name="xml.entities.set.Customer">
+    <class name="usingxml.entities.set.Customer">
         <id name="customerId">
             <generator class="increment"/>
         </id>
         <property name="customerName"/>
         <property name="customerAddress"/>
     </class>
-    <class name="xml.entities.map.Dealer">
+    <class name="usingxml.entities.map.Dealer">
         <id name="dealerId">
             <generator class="increment"/>
         </id>
@@ -27,10 +27,10 @@
         <map name="products" cascade="all">
             <key column="dealerId"/>
             <map-key type="java.lang.String"/>
-            <one-to-many class="xml.entities.map.Product"/>
+            <one-to-many class="usingxml.entities.map.Product"/>
         </map>
     </class>
-    <class name="xml.entities.map.Product">
+    <class name="usingxml.entities.map.Product">
         <id name="productId">
             <generator class="increment"/>
         </id>

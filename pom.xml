@@ -18,7 +18,7 @@
         <module>hibernate-inheritance-table-per-sub-class</module>
         <module>hibernate-connection-pooling</module>
         <module>hibernate-connection-pooling-third-party</module>
-        <module>hibernate-hql</module>
+        <module>hibernate-multi-row-operations</module>
         <module>hibernate-criteria</module>
         <module>hibernate-collection-mapping</module>
         <module>hibernate-native-sql-queries</module>
@@ -27,6 +27,8 @@
         <module>hibernate-associations-one-to-many</module>
         <module>hibernate-association-one-to-many-bag</module>
         <module>hibernate-association-many-to-one</module>
+        <module>hibernate-association-one-to-one-primarykey</module>
+        <module>hibernate-association-one-to-one-foreignkey</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
