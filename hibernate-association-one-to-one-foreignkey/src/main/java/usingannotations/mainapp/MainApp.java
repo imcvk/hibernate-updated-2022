@@ -1,34 +1,31 @@
 package usingannotations.mainapp;
 
 
-import usingannotations.entities.License;
-import usingannotations.entities.User;
-import util.dbutil.DBUtils;
+import usingannotations.entities.Address;
+import usingannotations.entities.Student;
+import util.dbutil.DBUtilsAnnotations;
 import util.dbutil.DataFaker;
-
-import java.util.Date;
 
 public class MainApp {
 	public static void main(String[] args) {
-		DBUtils dbUtils = new DBUtils();
-		dbUtils.create(bootstrapLicense(new DataFaker()));
+		DBUtilsAnnotations dbUtilsAnnotations = new DBUtilsAnnotations();
+		dbUtilsAnnotations.create(generateStudent(new DataFaker()));
 	}
 
-	public static User bootstrapUser(DataFaker faker) {
-		User user = new User();
-		String username = faker.getName();
-		user.setUsername(username);
-		return user;
+	public static Student generateStudent(DataFaker faker) {
+		Student student = new Student();
+		String name = faker.getName();
+		student.setStudentName(name);
+		student.setAddress(generateAddress(faker));
+		System.out.println(student);
+		return student;
 	}
 
-	public static License bootstrapLicense(DataFaker faker) {
-		License license = new License();
-		Date issuedDate = new Date();
-		Date expiryDate = new Date();
-		User user = bootstrapUser(faker);
-		license.setIssuedDate(issuedDate);
-		license.setExpiryDate(expiryDate);
-		license.setUser(user);
-		return license;
+	public static Address generateAddress(DataFaker faker) {
+		int hno = DataFaker.faker.number().numberBetween(111, 9999);
+		String city = DataFaker.faker.address().city();
+		String street = DataFaker.faker.address().streetAddress();
+		return new Address(hno, street, city);
 	}
+
 }

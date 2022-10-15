@@ -6,8 +6,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-import usingannotations.entities.License;
-import usingannotations.entities.User;
+import usingannotations.entities.Student;
 
 import java.util.Properties;
 
@@ -26,8 +25,7 @@ public class HibernateUtil_Annotations {
 			p.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
 			p.put(Environment.AUTOCOMMIT, "true");
 		}
-		Configuration configuration = new Configuration().setProperties(p)
-				.addAnnotatedClass(User.class).addAnnotatedClass(License.class);
+		Configuration configuration = new Configuration().setProperties(p).addAnnotatedClass(Student.class);
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(p).build();
 		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
 		return sessionFactory;

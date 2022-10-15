@@ -29,6 +29,7 @@
         <module>hibernate-association-many-to-one</module>
         <module>hibernate-association-one-to-one-primarykey</module>
         <module>hibernate-association-one-to-one-foreignkey</module>
+        <module>hibernate-component-mapping</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

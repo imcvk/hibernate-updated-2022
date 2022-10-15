@@ -2,20 +2,22 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+<!--    <class name="usingxml.entities.Address">-->
+<!--        <id name="hno">-->
+<!--            <generator class="assigned"/>-->
+<!--        </id>-->
+<!--        <property name="city"/>-->
+<!--        <property name="street"/>-->
+<!--    </class>-->
 
-    <class name="usingxml.entities.License">
-        <id name="licenseId" type="int">
+    <class name="usingxml.entities.Student">
+        <id name="studentId">
             <generator class="sequence"/>
         </id>
-        <property name="issuedDate" type="java.util.Date"/>
-        <property name="expiryDate" type="java.util.Date"/>
-        <many-to-one name="user" class="usingxml.entities.User" cascade="all" not-null="true"/>
-    </class>
-    <class name="usingxml.entities.User">
-        <id name="userid" type="int">
-            <generator class="sequence"/>
-        </id>
-        <property name="username" type="java.lang.String"/>
-
+        <property name="studentName"/>
+        <component name="address">
+            <property name="street"/>
+            <property name="city"/>
+        </component>
     </class>
 </hibernate-mapping>
