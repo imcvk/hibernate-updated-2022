@@ -4,8 +4,9 @@
 <hibernate-mapping>
     <class name="xml.entities.Company">
         <id name="companyId">
-            <generator class="assigned"/>
+            <generator class="increment"/>
         </id>
-        <property name="image"/>
+        <property name="image" length="1000000"/>
+        <property name="resume" length="1000000"/>
     </class>
 </hibernate-mapping>

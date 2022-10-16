@@ -1,14 +1,16 @@
 package xml.entities;
 
-import java.sql.Blob;
+
 
 public class Company {
 	private int companyId;
 	private byte[] image;
+	private char[] resume;
 
-	public Company(int companyId, byte[] image) {
+	public Company(int companyId, byte[] image, char[] resume) {
 		this.companyId = companyId;
 		this.image = image;
+		this.resume = resume;
 	}
 
 	public Company() {
@@ -28,5 +30,20 @@ public class Company {
 
 	public void setImage(byte[] image) {
 		this.image = image;
+	}
+
+	public char[] getResume() {
+		return resume;
+	}
+
+	public void setResume(char[] resume) {
+		this.resume = resume;
+	}
+
+	@Override
+	public String toString() {
+		return "Company{" +
+				"companyId=" + companyId +
+				'}';
 	}
 }
