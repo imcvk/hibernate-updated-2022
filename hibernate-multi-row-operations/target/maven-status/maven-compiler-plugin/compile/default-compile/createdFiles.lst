@@ -1,0 +1,7 @@
+hql/dbutil/HQL_Select.class
+util/HibernateUtil.class
+hql/mainapp/MainApp.class
+hql/entities/TestEmployee.class
+hql/entities/Employee.class
+util/DataFaker.class
+hql/dbutil/HQL_Non_Select.class

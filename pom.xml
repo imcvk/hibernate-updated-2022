@@ -14,10 +14,10 @@
         <module>hibernate-generators</module>
         <module>hibernate-composite-key</module>
         <module>hibernate-inheritance-table-per-class</module>
-        <module>hibernate-inheritance-table-per-concreteclass</module>
+        <module>hibernate-inheritance-table-per-conreteclass</module>
         <module>hibernate-inheritance-table-per-sub-class</module>
         <module>hibernate-connection-pooling</module>
-        <module>hibernate-connection-pooling-third-party</module>
+        <module>hibernate-third-party-connection-pooling</module>
         <module>hibernate-multi-row-operations</module>
         <module>hibernate-criteria</module>
         <module>hibernate-collection-mapping</module>
@@ -30,6 +30,7 @@
         <module>hibernate-association-one-to-one-primarykey</module>
         <module>hibernate-association-one-to-one-foreignkey</module>
         <module>hibernate-component-mapping</module>
+        <module>hibernate-image-text-insert-read</module>
     </modules>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->

@@ -1,0 +1,16 @@
+ublic class MainApp {
+	public static void main(String[] args) throws IOException {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		Company company = new Company();
+
+		File file=new File("pic.png");
+		InputStream inputStream=new FileInputStream(file);
+		byte[] data = new byte[inputStream.available()];
+		inputStream.read(data);
+		company.setImage(data);
+		company.setCompanyId(454);
+		session.persist(company);
+		transaction.commit();
+		session.close();
+	}

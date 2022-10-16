@@ -12,9 +12,11 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
+        <!--        Proxool property    -->
+        <property name="proxool.pool_alias">proxool</property>
+        <property name="hibernate.proxool.xml">proxool.xml</property>
         <!--        mapping properties-->
-        <mapping class="usingxml.entities.Vendor"/>
-        <mapping class="usingxml.entities.Customer"/>
+        <mapping class="entities.Employee"/>
         <mapping resource="hibernate-mapping.xml"/>
     </session-factory>
 </hibernate-configuration>
